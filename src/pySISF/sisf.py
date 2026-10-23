@@ -669,7 +669,7 @@ class sisf:
                         chunk = self.get_chunk(chunk_id_x, chunk_id_y, chunk_id_z, c, scale)
 
                         out[
-                            c,
+                            c - key[0][0],  # out holds only the selected channels
                             xstart : xstart + xsize,
                             ystart : ystart + ysize,
                             zstart : zstart + zsize,
